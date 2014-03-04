@@ -77,12 +77,12 @@ class MethodReturns
   def self.include?(array, search_item)
     # TODO: Make this method return true or false depending whether
     #       or not the search_item exists in the array.
-    array.each do |elem|
-      if elem == search_item
-        true
+
+      if array.include?(search_item)
+         return true
+      else
+         return false
       end
-    end
-    false
   end
 
   def self.get_name
