@@ -19,7 +19,7 @@ describe "Ruby Review: You" do
 
   describe "Your knowledge of Hashes" do
 
-    xyou "know how to change a value in a hash" do
+    you "know how to change a value in a hash" do
       wardrobe = {
           "top compartment" => {
             :item => "neck tie"
@@ -38,7 +38,7 @@ describe "Ruby Review: You" do
 
   describe "Your knowledge of Arrays" do
 
-    xyou "know how to add a hash to an array" do
+    you "know how to add a hash to an array" do
       pets = [{ :dog => 'Lucky'}, { :parrot => 'Polly'}]
       ArrayProblems.add_cat_to_array(pets)
       expect(pets).to eq [{ :dog => 'Lucky'}, { :parrot => 'Polly'}, { :cat => 'Pogo'}]
@@ -49,7 +49,7 @@ describe "Ruby Review: You" do
       expect(pets).to eq [{ :chipmunk => 'Joel'}, { :snake => 'Monty'}, { :cat => 'Pogo'}]
     end
 
-    xyou "know how to use the map method part 1" do
+    you "know how to use the map method part 1" do
       wardrobe_items = [
         { :name => "coat", :size => "medium" },
         { :name => "hat", :size =>  "large" }
@@ -61,7 +61,7 @@ describe "Ruby Review: You" do
       expect(@source).to include_code(:map).in_class_method(:ArrayProblems, :list_wardrobe_item_sizes)
     end
 
-    xyou "know how to use the map method part 2" do
+    you "know how to use the map method part 2" do
       weather = [
         "drizzly",
         "cold"

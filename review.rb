@@ -15,7 +15,10 @@ module GettersSetters
     def initialize
       @skill = "bedside manners"
     end
-    # TODO: Write a setter method for @skill
+
+    def skill=(new_skill)
+      @skill = new_skill
+    end
   end
 
 end
@@ -27,7 +30,7 @@ class HashProblems
   # # # # # # #
 
   def self.update_top_compartment_item(wardrobe_hash)
-    # TODO: Complete this method by writing A SINGLE LINE
+    wardrobe_hash["top compartment"][:item] = "fake beard"
   end
 
 end
@@ -40,7 +43,7 @@ class ArrayProblems
   # # # # # # #
 
   def self.add_cat_to_array(array)
-    # TODO: Complete this method
+    array << {cat: "Pogo"}
   end
 
   # # # # # # #
@@ -48,7 +51,7 @@ class ArrayProblems
   # # # # # # #
 
   def self.list_wardrobe_item_sizes(array)
-    # TODO: Use the map method to create an array of wardrobe item sizes
+    array.map {|hash| hash[:size]}
   end
 
   # # # # # # #
@@ -56,7 +59,7 @@ class ArrayProblems
   # # # # # # #
 
   def self.tell_me_the_weather(array)
-    # TODO: Use the map method to create an array of weather descriptions
+    array.map{|weather| "It is #{weather}"}
   end
 
   # # # # # # #
