@@ -94,15 +94,15 @@ end
 
 
 module Scopes
-
+  @found = ""
   class Person
     def jump(height)
-      jump_height = height
-      "I can jump #{jump_height} inches!"
+      @jump_height = height
+      "I can jump #{@jump_height} inches!"
     end
 
     def last_jump_height
-      "I last jumped #{jump_height} inches."
+      "I last jumped #{@jump_height} inches."
     end
   end
 
@@ -112,13 +112,14 @@ module Scopes
     end
 
     def find_first(salary)
+      @found = nil
       @people.each do |person|
         if person[:salary] == salary
-          found = person
+          @found = person
         end
       end
 
-      found
+      @found
     end
   end
 
